@@ -7,13 +7,17 @@ searchButton.addEventListener('click', function(){
     .then(response => {
 
         let result = document.querySelector('.hasil');
+
         result.innerHTML = 
         `
         <h1>City : ${response.name}</h1>
         <h2>Conditions : ${response.weather[0].description}</h2>
-        <h2>Temperature : ${response.main.temp} C</h2>
-        <h2>Wind Speed : ${response.wind.speed} m/s</h2>
+        <h2>Temperature : ${response.main.temp} &deg;C</h2>
+        <h2>Wind Speed : ${response.wind.speed} km/h</h2>
         `
+
+        console.log(response);
     });
+
     inputKey.value = null;
 });
