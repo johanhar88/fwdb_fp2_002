@@ -11,7 +11,7 @@ searchButton.addEventListener('click', function(){
         result.innerHTML = 
         `
         <h1>City : ${response.name}</h1>
-        <h2>Conditions : ${response.weather[0].description}</h2>
+        <h2>Conditions : ${response.weather[0].description}</h2> <img src="https://openweathermap.org/img/wn/${response.weather[0].icon}@4x.png" alt="">
         <h2>Temperature : ${response.main.temp} &deg;C</h2>
         <h2>Wind Speed : ${response.wind.speed} km/h</h2>
         `
